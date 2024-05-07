@@ -80,8 +80,8 @@ function computeDistance(wrapped, gridSpaces) {
 			console.log("i '" + i + "'; d '" + d + "'");
 			totalDistance += d;
 			let s = this.segments[i];
-			//s.last = i === (this.segments.length - 1);
-			s.last = 50;
+			s.last = i === (this.segments.length - 1);
+			s.totalDistance = 50;
 			s.distance = d;
 			s.text = this._getSegmentLabel(s, totalDistance);
 		}
