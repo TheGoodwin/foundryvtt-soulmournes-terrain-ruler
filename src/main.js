@@ -44,12 +44,12 @@ export function updateTerrainRulerState(newState) {
 }
 
 function hookFunctions() {
-	libWrapper.register("terrain-ruler", "Canvas.prototype._onDragLeftStart", onDragLeftStart, "MIXED");
-	libWrapper.register("terrain-ruler", "Ruler.prototype._computeDistance", computeDistance, "MIXED");
-	libWrapper.register("terrain-ruler", "Ruler.prototype._endMeasurement", endMeasurement, "WRAPPER");
-	libWrapper.register("terrain-ruler", "Ruler.prototype._highlightMeasurementSegment", highlightMeasurementSegment, "MIXED");
-	libWrapper.register("terrain-ruler", "Ruler.prototype.toJSON", toJSON, "WRAPPER");
-	libWrapper.register("terrain-ruler", "Ruler.prototype.update", rulerUpdate, "WRAPPER");
+	libWrapper.register("thegoodwin-terrain-ruler", "Canvas.prototype._onDragLeftStart", onDragLeftStart, "MIXED");
+	libWrapper.register("thegoodwin-terrain-ruler", "Ruler.prototype._computeDistance", computeDistance, "MIXED");
+	libWrapper.register("thegoodwin-terrain-ruler", "Ruler.prototype._endMeasurement", endMeasurement, "WRAPPER");
+	libWrapper.register("thegoodwin-terrain-ruler", "Ruler.prototype._highlightMeasurementSegment", highlightMeasurementSegment, "MIXED");
+	libWrapper.register("thegoodwin-terrain-ruler", "Ruler.prototype.toJSON", toJSON, "WRAPPER");
+	libWrapper.register("thegoodwin-terrain-ruler", "Ruler.prototype.update", rulerUpdate, "WRAPPER");
 }
 
 function onDragLeftStart(wrapped, event) {

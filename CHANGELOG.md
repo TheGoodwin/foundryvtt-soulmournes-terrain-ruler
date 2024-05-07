@@ -1,3 +1,7 @@
+## 1.8.2
+### Bug fixes
+- Fix bug with libwrapper which made the sidebar icon not appear
+
 ## 1.8.1
 ### Bug fixes
 - Link to MANIFEST was not right
