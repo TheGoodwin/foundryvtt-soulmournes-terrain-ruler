@@ -77,15 +77,12 @@ function computeDistance(wrapped, gridSpaces) {
 		const distances = measureDistances(this.segments, { gridSpaces });
 		let totalDistance = 0;
 		for (let [i, d] of distances.entries()) {
-			console.log("i '" + i + "'; d '" + d + "'");
 			totalDistance += d;
 			let s = this.segments[i];
 			s.last = i === (this.segments.length - 1);
-			s.totalDistance = 50;
 			s.distance = d;
-			console.log(this._getSegmentLabel(s, totalDistance));
 			s.text = this._getSegmentLabel(s, totalDistance);
-			//s.label = new PreciseText("Hello")
+			this.totalDistance = totalDistance;
 		}
 	}
 	else {
