@@ -1,7 +1,7 @@
-import {libWrapper} from "../lib/libwrapper_shim.js";
-import {getPixelsFromGridPosition} from "./foundry_fixes.js"
-import {measureDistances, getCostEnhancedTerrainlayer} from "./measure.js"
-import {DefaultToggleState, getDefaultToggleState, registerSettings, settingsKey} from "./settings.js";
+import { libWrapper } from "../lib/libwrapper_shim.js";
+import { getPixelsFromGridPosition } from "./foundry_fixes.js"
+import { measureDistances, getCostEnhancedTerrainlayer } from "./measure.js"
+import { DefaultToggleState, getDefaultToggleState, registerSettings, settingsKey } from "./settings.js";
 
 CONFIG.debug.terrainRuler = false
 
@@ -61,7 +61,7 @@ function onDragLeftStart(wrapped, event) {
 		ruler.terrainRulerIsCandidate = true;
 		if (terrainRuler.active) {
 			// Show terrain if the show on drag setting is enabled
-			canvas.terrain._tokenDrag = true; 
+			canvas.terrain._tokenDrag = true;
 			canvas.terrain.refreshVisibility();
 
 			// Start measuring
@@ -74,7 +74,7 @@ function onDragLeftStart(wrapped, event) {
 
 function computeDistance(wrapped, gridSpaces) {
 	if (this.isTerrainRuler) {
-		const distances = measureDistances(this.segments, {gridSpaces});
+		const distances = measureDistances(this.segments, { gridSpaces });
 		let totalDistance = 0;
 		for (let [i, d] of distances.entries()) {
 			totalDistance += d;
@@ -82,6 +82,7 @@ function computeDistance(wrapped, gridSpaces) {
 			s.last = i === (this.segments.length - 1);
 			s.distance = d;
 			s.text = this._getSegmentLabel(s, totalDistance);
+			this.totalDistance = totalDistance;
 		}
 	}
 	else {
@@ -91,7 +92,7 @@ function computeDistance(wrapped, gridSpaces) {
 
 function endMeasurement(wrapped, event) {
 	// Reset terrain visiblility to default state
-	canvas.terrain._tokenDrag = false; 
+	canvas.terrain._tokenDrag = false;
 	canvas.terrain.refreshVisibility();
 
 	this.isTerrainRuler = false;
@@ -106,7 +107,7 @@ function highlightMeasurementSegment(wrapped, segment) {
 	}
 	for (const space of ray.terrainRulerVisitedSpaces) {
 		const [x, y] = getPixelsFromGridPosition(space.x, space.y);
-		canvas.grid.highlightPosition(this.name, {x, y, color: this.color});
+		canvas.grid.highlightPosition(this.name, { x, y, color: this.color });
 	}
 }
 
