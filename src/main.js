@@ -85,6 +85,7 @@ function computeDistance(wrapped, gridSpaces) {
 			s.distance = d;
 			console.log(this._getSegmentLabel(s, totalDistance));
 			s.text = this._getSegmentLabel(s, totalDistance);
+			s.label = "Hello"
 		}
 	}
 	else {
