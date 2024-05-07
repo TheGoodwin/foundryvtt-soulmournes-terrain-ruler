@@ -76,7 +76,7 @@ function computeDistance(wrapped, gridSpaces) {
 	if (this.isTerrainRuler) {
 		const distances = measureDistances(this.segments, { gridSpaces });
 		let totalDistance = 0;
-		console.log(distance.entries());
+		console.log(distances.entries());
 		for (let [i, d] of distances.entries()) {
 			totalDistance += d;
 			let s = this.segments[i];
