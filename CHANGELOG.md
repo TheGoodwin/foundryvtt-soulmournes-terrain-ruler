@@ -1,3 +1,7 @@
+## 1.8.0
+### Compatibility
+- Terrain Ruler is now compatible with Foundry v11
+
 ## 1.7.6
 ### Translation
 - Foundry should now be able to detect the Simplified Chenese translation properly (thanks AlphaStarguide!)
