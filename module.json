@@ -56,7 +56,7 @@
 	},
 	"url": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler",
 	"download": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/archive/v1.8.1.zip",
-	"manifest": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/blob/master/module.json",
+	"manifest": "https://raw.githubusercontent.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/master/module.json",
 	"readme": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/blob/master/README.md",
 	"changelog": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/blob/master/CHANGELOG.md",
 	"bugs": "https://github.com/TheGoodwin/foundryvtt-thegoodwins-terrain-ruler/issues",
