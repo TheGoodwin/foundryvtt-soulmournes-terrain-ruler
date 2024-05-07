@@ -1,3 +1,7 @@
+## 1.8.1
+### Bug fixes
+- Link to MANIFEST was not right
+
 ## 1.8.0
 ### Compatibility
 - Terrain Ruler is now compatible with Foundry v11
